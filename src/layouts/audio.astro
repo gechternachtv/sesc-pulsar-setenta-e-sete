@@ -1,5 +1,6 @@
 ---
 import "../style/style.css";
+import QRCode from "../components/qrcode.astro";
 const { frontmatter, file } = Astro.props;
 const filename = "/" + file.split("/").pop()?.replace(".md", ".mp3");
 ---
@@ -26,6 +27,10 @@ const filename = "/" + file.split("/").pop()?.replace(".md", ".mp3");
                 <audio controls src={filename}></audio>
             </noscript>
             <slot />
+
+            <div class="qr-code">
+                <QRCode prefix="https://setenta-e-sete-minutos.vercel.app" />
+            </div>
         </div>
     </body>
     <script src="../style/audio.js"></script>

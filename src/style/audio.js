@@ -7,3 +7,7 @@ btn.addEventListener('click', () => audio.paused ? audio.play() : audio.pause())
 audio.addEventListener('play', () => btn.innerHTML = pause);
 audio.addEventListener('pause', () => btn.innerHTML = play);
 audio.addEventListener('ended', () => btn.innerHTML = play);
+
+if (window.localStorage.getItem("qr")) {
+    document.querySelector(".qr-code").setAttribute("style", "display:block !important")
+}

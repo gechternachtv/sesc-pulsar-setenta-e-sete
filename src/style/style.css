@@ -73,3 +73,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.qr-code {
+    display: none;
+}

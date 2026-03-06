@@ -1,0 +1,67 @@
+---
+/**
+ * Dependencies:
+ *   npm install qrcode
+ *   npm install -D @types/qrcode   (optional, for TS)
+ *
+ * Usage:
+ *   import QRCode from '@/components/QRCode.astro'
+ *   <QRCode prefix="https://yourdomain.com" />
+ *
+ * Props:
+ *   prefix  — base URL prepended to Astro.url.pathname (required)
+ *   size    — pixel size of the QR image (default: 200)
+ *   label   — show the full URL below the QR (default: true)
+ */
+
+import QR from "qrcode";
+
+interface Props {
+    prefix: string;
+    size?: number;
+    label?: boolean;
+}
+
+const { prefix, size = 500, label = true } = Astro.props;
+const url = `${prefix.replace(/\/$/, "")}${Astro.url.pathname}`;
+const dataUrl = await QR.toDataURL(url, {
+    width: size,
+    margin: 1,
+    color: { dark: "#000000", light: "#ffffff" },
+});
+---
+
+<figure class="qr-block">
+    <img src={dataUrl} width={size} height={size} alt={`QR code for ${url}`} />
+    {label && <figcaption>{url}</figcaption>}
+</figure>
+
+<style>
+    .qr-block {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .qr-block img {
+        display: block;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+    }
+
+    .qr-block figcaption {
+        font-size: 11px;
+        color: #666;
+        word-break: break-all;
+        max-width: 200px;
+        text-align: center;
+        line-height: 18px;
+    }
+    img {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        height: auto;
+    }
+</style>

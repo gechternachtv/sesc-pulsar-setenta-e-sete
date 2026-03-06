@@ -2,6 +2,7 @@
 layout: "../layouts/audio.astro"
 title: "Texto curatorial"
 ---
+
 (...) ​caminhante, são tuas pegadas o
 caminho e nada mais; caminhante, não
 há caminho, se faz caminho ao andar.

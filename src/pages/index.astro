@@ -6,13 +6,32 @@ const pages = Object.values(import.meta.glob("./*.md", { eager: true })).filter(
 ---
 
 <Base frontmatter={{ title: "index" }}>
+    <h1>Obras</h1>
     <ul>
         {
-            pages.map((page) => (
-                <li>
-                    <a href={page.url}>{page.frontmatter.title ?? page.url}</a>
-                </li>
-            ))
+            pages
+                .filter((page) => {
+                    return (
+                        page.url != "/ficha-tecnica" &&
+                        page.url != "/texto-curatorial"
+                    );
+                })
+                .map((page) => (
+                    <li>
+                        <a href={page.url}>
+                            {page.frontmatter.title ?? page.url}
+                        </a>
+                    </li>
+                ))
         }
+    </ul>
+    <hr />
+    <ul>
+        <li>
+            <a href="/texto-curatorial">Texto curatorial</a>
+        </li>
+        <li>
+            <a href="/ficha-tecnica">Equipe</a>
+        </li>
     </ul>
 </Base>
