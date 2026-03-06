@@ -14,6 +14,7 @@ body {
     color: #feffff;
     font-size: 19px;
     padding: 0;
+    height: auto;
 }
 
 .container {
@@ -51,8 +52,24 @@ a {
     font-size: 22px;
     line-height: 35px;
     text-align: left;
+    font-weight: bold;
 }
 
 .left li {
     margin-bottom: 20px
+}
+
+.container img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.home {
+    background-image: url("rect1.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

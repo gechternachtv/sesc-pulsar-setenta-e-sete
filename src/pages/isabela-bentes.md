@@ -2,6 +2,7 @@
 layout: "../layouts/audio.astro"
 title: "Isabela Bentes"
 ---
+<img src="/isabela-bentes.png">
 
 A instalação de Isabela Bentes é constituída de uma televisão de tubo ligada e fotografia de pedaços de televisão descartada encontradas numa rua. O lambe lambe é colado na parede de fundo sobre contact transparente. A dimensão é de quarenta centímetros de comprimento de largura e 1 metro de altura.  obra iniciada em dois mil e dezoito e finalizada em dois mil e vinte seis.
 

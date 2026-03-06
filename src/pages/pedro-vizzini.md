@@ -2,7 +2,11 @@
 layout: "../layouts/audio.astro"
 title: "Pedro Vizzini"
 ---
+<img src="/pedro-vizzini.png">
+
 Esculturas de madeira feitas por Pedro Vizzini. A primeira chama-se a serpente. A cor é vermelha, e a forma é de um cubo de onde sai uma estrutura com curvas sugerindo o movimento de uma serpente. Dimensões de vinte centímetros de altura e dez centímetros de largura. Ano de 2019. A segunda obra é sem título. Dimensão de vinte oito centímetros de altura por quinze cen´timetord fr largura. Ano de 2019.
+
+<img src="/pedro-vizzini2.png">
 
 Conceito do artista: esta série de pequenos objetos escultóricos sugere um diálogo com a paisagem urbana e suas contradições. Com o olhar atento, o artista recolhe e transforma fragmentos de madeira de descarte, as quais combinadas conferem formas inusitadas e provocativas, rompendo assim com a rigidez normalmente associada à escultura tradicional.
 
