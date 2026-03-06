@@ -1,0 +1,32 @@
+---
+import "../style/style.css";
+const { frontmatter, file } = Astro.props;
+const filename = "/" + file.split("/").pop()?.replace(".md", ".mp3");
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <div class="container">
+            <button id="play-pause-btn">
+                <svg viewBox="0 0 24 24" width="98" height="98" fill="white">
+                    <polygon points="5,3 19,12 5,21"></polygon>
+                </svg>
+            </button>
+            <audio style="display:none;" controls src={filename}></audio>
+            <noscript>
+                <audio controls src={filename}></audio>
+            </noscript>
+            <slot />
+        </div>
+    </body>
+    <script src="../style/audio.js"></script>
+</html>
